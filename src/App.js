@@ -1,5 +1,5 @@
 import logo from './logo.svg';
-import './App.css';
+import './App.module.css';
 import Home from './Component/Home/Home';
 // import Stack from '@mui/material/Stack';
 import Button from '@mui/material/Button';

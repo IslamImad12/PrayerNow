@@ -15,6 +15,7 @@ import Select from '@mui/material/Select';
 import axios from 'axios';
 import moment from 'moment';
 import 'moment/locale/ar';
+import App from '../../App.module.css'
 
 // Import your images
 import Image1 from '../../Images/fajr.png';
@@ -149,13 +150,13 @@ export default function Home() {
       <Container maxwidth="xl" className="my-5">
         <Box sx={{ flexGrow: 1 }}>
           <Grid container spacing={2}>
-            <Grid xs={6} className="bg-danger">
+            <Grid xs={6} className={App.tim}>
               <div>
                 <h2>{today}</h2>
                 <h3>{selectedCity.displayName}</h3>
               </div>
             </Grid>
-            <Grid xs={6} className="bg-success">
+            <Grid xs={6} className={App.tim}>
               <div>
                 <h2>متبقي حتى صلاة {prayersArray[nextPrayerIndex].displayName}</h2>
                 <h1>{remainingTime}</h1>
@@ -174,7 +175,7 @@ export default function Home() {
       </Container>
 
       <Stack direction="row" justifyContent={'center'} className="my-5">
-        <FormControl style={{ width: '20%' }}>
+        <FormControl style={{ width: '20%' }} className={App.tim}>
           <InputLabel id="demo-simple-select-label">المدينة</InputLabel>
           <Select
             labelId="demo-simple-select-label"
